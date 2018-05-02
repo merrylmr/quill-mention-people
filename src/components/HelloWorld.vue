@@ -40,10 +40,22 @@ export default {
       editorOption:{
         modules:{
           atPeople:{
+            //成员列表
             list:[
               {id:1,name:'lmr'},
               {id:2,name:'merry'},
-              ]
+              {id:1,name:'lmr'},
+              {id:2,name:'merry'},
+              {id:1,name:'lmr'},
+              {id:2,name:'merry'},
+              {id:1,name:'lmr'},
+              {id:2,name:'merry'},
+              {id:1,name:'lmr'},
+              {id:2,name:'merry'},
+              {id:3,name:'廖美容'},
+              ],
+            //选择某一个成员执行的操作：
+            atOneMemberAction:this.atOneMemberAction
           },
           toolbar:{
             container: container,
@@ -65,7 +77,14 @@ export default {
     onEditorChange({ quill, html, text }) {
       console.log('editor change!', quill, html, text)
       this.content = html
+    },
+
+
+    atOneMemberAction:function(item){
+        console.log('click member');
+        console.log(item);
     }
+
   },
   computed:{
     editor() {
