@@ -1,0 +1,24 @@
+.quill-at-member{
+  position:absolute;
+  top:0;
+  left:0;
+  min-width:120px;
+  background-color:#fff;
+  display:none;
+}
+.quill-at-member> ul{
+  padding:0;
+  margin:0;
+  border:1px solid #eee;
+
+}
+.quill-at-member>ul>li{
+  padding:10px 0;
+  margin:0;
+  list-style:none;
+  cursor:pointer;
+}
+
+.quill-at-member>ul>li:hover{
+  background:#eee;
+}
