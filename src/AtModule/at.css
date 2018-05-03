@@ -5,15 +5,18 @@
   min-width:120px;
   background-color:#fff;
   display:none;
-  max-height:200px;
-  overflow-y:auto;
+
 }
 .quill-at-member> ul{
+  position:relative;
   padding:0;
   margin:0;
   border:1px solid #eee;
+  max-height:200px;
+  overflow-y:auto;
 }
 .quill-at-member>ul>li{
+  position:relative;
   padding:10px 0;
   margin:0;
   list-style:none;

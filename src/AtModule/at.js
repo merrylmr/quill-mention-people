@@ -149,12 +149,10 @@ export default class AtPeople{
     let itemH = itemEl.offsetHeight;
     console.log('parentH:'+parentH,'positionTop:'+positionTop,'itemH:'+itemH);
     console.log(positionTop > parentH - itemH,parentH - itemH,positionTop);
-    if (positionTop > parentH - itemH) {
-      parentEl.scrollTop=itemH * itemEl.prevAll('li:visible').length - parentH + itemH;
-    }
-    if (positionTop < 0) {
-      return parentEl.scrollTop=itemH * itemEl.prevAll('li:visible').length;
-    }
+
+      parentEl.scrollTop=itemH * itemEl.prevAll().length - parentH + itemH;
+
+
   }
 
   prevAll=()=>{
