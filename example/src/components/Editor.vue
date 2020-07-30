@@ -13,12 +13,13 @@
 
 <script>
   import Quill from 'quill';
-  import atPeople from 'quill-mention-people';
+  import atPeople from '../../../index';
+
   Quill.register('modules/atPeople', atPeople);
-  import Mentions from './mention-quill.js'
+  // import Mentions from './mention-quill.js'
   // Quill.register('modules/mentions', Mentions);
   //引入@成员列表的css
-  import 'quill-mention-people/index.css'
+  import '../../../index.css'
 
   export default {
     name: 'zz-quill',
@@ -42,8 +43,15 @@
                 {id: 10, name: 'jerry'},
                 {id: 11, name: 'jackson'}
               ],
+              blotName: 'mention',
+              props: {label: name},
               //选择某一个成员执行的操作：
-              atOneMemberAction: this.atOneMemberAction
+              atOneMemberAction: this.atOneMemberAction,
+              mentionDenotationChars: ['@'],
+              isolateCharacter: false,
+              minChars: 0,
+              maxChars: 31,
+              allowedChars: /^[A-Za-z\sÅÄÖåäö]*$/,
             },
           }
         }
